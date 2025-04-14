@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Goal Form</title>
+    <link rel="stylesheet" href="/frontend/css/form.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap"
+		rel="stylesheet" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap"
+		rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2></h2>
+        <form>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label>Sex:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="sex" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="sex" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="sex" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (in kg):</label>
+                <input type="number" id="weight" name="weight" min="1" step="0.1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="height">Height (in cm):</label>
+                <input type="number" id="height" name="height" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="activityLevel">Your Typical Activity Level:</label>
+                <select id="activityLevel" name="activityLevel">
+                    <option value="">Select level</option>
+                    <option value="sedentary">Sedentary (mostly sitting/lying)</option>
+                    <option value="lightly_active">Lightly Active (some walking, standing)</option>
+                    <option value="moderately_active">Moderately Active (regular walking, some exercise)</option>
+                    <option value="very_active">Very Active (intense exercise regularly)</option>
+                    <option value="extra_active">Extra Active (very intense exercise daily)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Current Health Conditions (optional):</label>
+                <div class="checkbox-group">
+                    <div><input type="checkbox" id="diabetes" name="healthConditions" value="diabetes"><label for="diabetes">Diabetes</label></div>
+                    <div><input type="checkbox" id="hypertension" name="healthConditions" value="hypertension"><label for="hypertension">Hypertension</label></div>
+                    <div><input type="checkbox" id="asthma" name="healthConditions" value="asthma"><label for="asthma">Asthma</label></div>
+                    <div id="otherConditionContainer"><input type="checkbox" id="otherCondition" name="healthConditions" value="other"><label for="otherCondition">Other:</label> <input type="text" id="otherConditionText" name="otherConditionText"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Are you currently taking any medications?</label>
+                <div class="radio-group">
+                    <input type="radio" id="medication_yes" name="medications" value="yes">
+                    <label for="medication_yes">Yes</label>
+                    <input type="radio" id="medication_no" name="medications" value="no" checked>
+                    <label for="medication_no">No</label>
+                </div>
+                <label for="medicationList" style="display: none;">Please list your medications:</label>
+                <textarea id="medicationList" name="medicationList" rows="2" style="display: none;"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="sleepHours">Average hours of sleep per night:</label>
+                <input type="number" id="sleepHours" name="sleepHours" min="0" step="0.5">
+            </div>
+
+            <div class="form-group">
+                <label for="sleepQuality">How would you rate your sleep quality?</label>
+                <select id="sleepQuality" name="sleepQuality">
+                    <option value="">Select quality</option>
+                    <option value="poor">Poor</option>
+                    <option value="fair">Fair</option>
+                    <option value="good">Good</option>
+                    <option value="very_good">Very Good</option>
+                    <option value="excellent">Excellent</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="stressLevel">How would you rate your average stress level?</label>
+                <select id="stressLevel" name="stressLevel">
+                    <option value="">Select level</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="waterIntake">How many glasses of water do you typically drink per day?</label>
+                <input type="number" id="waterIntake" name="waterIntake" min="0">
+            </div>
+
+            <div class="form-group">
+                <label>Do you smoke?</label>
+                <div class="radio-group">
+                    <input type="radio" id="smoke_yes" name="smoking" value="yes">
+                    <label for="smoke_yes">Yes</label>
+                    <input type="radio" id="smoke_no" name="smoking" value="no" checked>
+                    <label for="smoke_no">No</label>
+                </div>
+                <label for="cigarettesPerDay" style="display: none;">How many cigarettes per day?</label>
+                <input type="number" id="cigarettesPerDay" name="cigarettesPerDay" min="0" style="display: none;">
+            </div>
+
+            <div class="form-group">
+                <label>Do you consume alcohol?</label>
+                <div class="radio-group">
+                    <input type="radio" id="alcohol_yes" name="alcohol" value="yes">
+                    <label for="alcohol_yes">Yes</label>
+                    <input type="radio" id="alcohol_no" name="alcohol" value="no" checked>
+                    <label for="alcohol_no">No</label>
+                </div>
+                <label for="alcoholFrequency" style="display: none;">How often?</label>
+                <select id="alcoholFrequency" name="alcoholFrequency" style="display: none;">
+                    <option value="">Select frequency</option>
+                    <option value="rarely">Rarely</option>
+                    <option value="occasionally">Occasionally</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="daily">Daily</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dietaryPreference">Dietary Preference:</label>
+                <div class="radio-group">
+                    <input type="radio" id="vegetarian" name="diet" value="vegetarian" required>
+                    <label for="vegetarian">Vegetarian</label>
+                    <input type="radio" id="nonVegetarian" name="diet" value="non-vegetarian">
+                    <label for="nonVegetarian">Non-Vegetarian</label>
+                    <input type="radio" id="vegan" name="diet" value="vegan">
+                    <label for="vegan">Vegan</label>
+                    <input type="radio" id="keto" name="diet" value="keto">
+                    <label for="keto">Keto</label>
+                    <input type="radio" id="paleo" name="diet" value="paleo">
+                    <label for="paleo">Paleo</label>
+                    <input type="radio" id="glutenFree" name="diet" value="gluten-free">
+                    <label for="glutenFree">Gluten-Free</label>
+                    <input type="radio" id="otherDiet" name="diet" value="other">
+                    <label for="otherDiet">Other:</label>
+                    <input type="text" id="otherDietText" name="otherDietText">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="goal">Your Primary Fitness Goal:</label>
+                <textarea id="goal" name="goal" rows="3" placeholder="e.g., Lose weight, build muscle, improve endurance" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exerciseFrequency">How often do you exercise (per week)?</label>
+                <select id="exerciseFrequency" name="exerciseFrequency">
+                    <option value="">Select frequency</option>
+                    <option value="0">0 times</option>
+                    <option value="1-2">1-2 times</option>
+                    <option value="3-4">3-4 times</option>
+                    <option value="5+">5+ times</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exerciseTime">How long do you typically exercise each time (in minutes)?</label>
+                <input type="number" id="exerciseTime" name="exerciseTime" min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="cardioFrequency">How often do you do cardio specifically (per week)?</label>
+                <select id="cardioFrequency" name="cardioFrequency">
+                    <option value="">Select frequency</option>
+                    <option value="0">0 times</option>
+                    <option value="1-2">1-2 times</option>
+                    <option value="3-4">3-4 times</option>
+                    <option value="5+">5+ times</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="/assets/js/form.js"></script>
+</body>
+</html>

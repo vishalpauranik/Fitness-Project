@@ -1,0 +1,205 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  font-family: 'Nunito Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  background-color: #dde2de;
+  color: #4a4a4a; 
+  line-height: 1.6;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/assets/images/service-3.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+header {
+  background-color: #F5F5F5; /* Light #F5F5F5 header */
+  padding: 14px 30px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+
+  max-width: 570px;     
+  margin: 30px auto 20px auto; 
+  border-radius: 10px;
+  
+}
+
+main {
+  max-width: 600px; 
+  
+  margin: 0 auto;     
+  padding: 0 15px; 
+}
+
+footer {
+  text-align: center;
+  
+  padding: 15px;
+  font-size: 0.85em;
+  color: #888;
+ 
+  max-width: 600px; 
+  margin: 25px auto 30px auto; 
+}
+
+
+section {
+  /*  (white) */
+  background-color: #F5F5F5;
+  border-radius: 18px; 
+  padding: 25px; 
+  margin-bottom: 25px; 
+ 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  
+  border: 1px solid #F5F5F5;
+}
+
+
+h1 {
+  color: #c87a5a;  orange;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+h2 {
+  color: #505050;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.25em;
+  border-bottom: 1px solid #f0f0f0; 
+  padding-bottom: 10px;
+}
+
+
+#log-form .form-group {
+  margin-bottom: 18px;
+}
+
+#log-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+#log-form input[type="text"],
+#log-form input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px; 
+  font-size: 0.95em;
+  font-family: inherit; 
+  transition: border-color 0.2s ease;
+}
+
+#log-form input[type="text"]:focus,
+#log-form input[type="number"]:focus {
+  outline: none;
+  border-color: #c87a5a; 
+}
+
+
+button {
+  font-family: inherit; 
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px; 
+  font-size: 0.95em;
+  font-weight: 600;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+}
+
+#log-form button[type="submit"] {
+ 
+  background-color: #d97746; 
+  color: #fff;
+  display: block; 
+  width: 100%;
+  margin-top: 10px;
+}
+
+#log-form button[type="submit"]:hover {
+  background-color: #c86a3a; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#clear-log-btn {
+ 
+  background-color: #f0f0f0; 
+  color: #666;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+#clear-log-btn:hover {
+  background-color: #e5e5e5;
+  border-color: #ccc;
+}
+
+
+#log-section h2 span { 
+  font-weight: 400;
+  color: #777;
+  font-size: 0.9em;
+}
+
+#food-log-list {
+  list-style: none; 
+  padding: 0;
+  margin-top: 15px;
+}
+
+#food-log-list li {
+  background-color: #fdfbf7; 
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95em;
+}
+
+#food-log-list li span { 
+  font-weight: 600;
+  color: #6cb8a0; 
+  margin-left: 10px;
+}
+
+
+#total-calories-section {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  text-align: right;
+  font-size: 1.1em;
+}
+
+#total-calories-section strong {
+  color: #444;
+}
+
+#total-calories {
+  font-weight: 700;
+  font-size: 1.15em;
+  color: #3a3a3a; 
+}
+
+.error-message {
+  color: #d9534f; 
+  font-size: 0.85em;
+  margin-top: 10px;
+  height: 1em; 
+}

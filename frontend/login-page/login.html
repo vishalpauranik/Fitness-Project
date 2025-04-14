@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login UI</title>
+    <link rel="stylesheet" href="/frontend/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="social-login">
+            <button class="facebook">Login with Facebook</button>
+            <button class="twitter">Login with X</button>
+            <button class="google">Login with Google+</button>
+        </div>
+        <div class="divider">OR</div>
+        <div class="manual-login">
+            <h2>Sign in manually</h2>
+            <input type="text" id="username" placeholder="Username or email">
+            <input type="password" id="password" placeholder="Password">
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <button class="login" onclick="login()">LOGIN</button>
+            <div class="links">
+                <a href="/frontend/signup/signup.html" class="register">Register now</a>
+                <a href="#" class="forgot">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/login.js" > </script>
+</body>
+</html>

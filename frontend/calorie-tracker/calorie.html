@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calorie Tracker</title>
+    <link rel="stylesheet" href="/frontend/css/calorie.css">
+</head>
+<body>
+
+    <header>
+        <h1> Calorie Tracker</h1>
+    </header>
+
+    <main>
+        <section id="input-section">
+            <h2>Log Food</h2>
+            <form id="log-form">
+                <div class="form-group">
+                    <label for="food-name">Food Item:</label>
+                    <input type="text" id="food-name" placeholder="e.g., Apple" required>
+                </div>
+                <div class="form-group">
+                    <label for="calories">Calories:</label>
+                    <input type="number" id="calories" placeholder="e.g., 95" min="0" required>
+                </div>
+                <button type="submit">Add Food Item</button>
+                 <p id="form-error" class="error-message"></p>
+            </form>
+        </section>
+
+        <section id="log-section">
+            <h2>Today's Log (<span id="current-date"></span>)</h2>
+            <ul id="food-log-list">
+                </ul>
+            <div id="total-calories-section">
+                <strong>Total Calories Today: <span id="total-calories">0</span> kcal</strong>
+            </div>
+             <button id="clear-log-btn">Clear Today's Log</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data saved in your browser's local storage.</p>
+    </footer>
+
+    <script src="/assets/js/calorie.js"></script>
+</body>
+</html>
